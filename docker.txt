@@ -1,0 +1,38 @@
+What is Docker?
+A platform for building, running and shipping application.
+Why an application might not run as expected in another machine?
+	One or more files missing, Software version mismatch, different configuration settings
+Docker is used to package applications with required dependancies.
+Container - An isolated environment for running and application. 
+Virtual Machine - An abstraction of hardware. We use Hypervisors like virtual box or VMware on top of hardware to support different operating systems.
+Problems with virtual machines - each VM needs a full-blown OS that needs to be licensed, patched and monitored,
+Slow to start because entire OS need to be loaded. Resource intensive (takes CPU, memory and disk space).
+Containers are lightweight, uses the OS of the host. Start Quickly. Need less hardware resources.
+Docker uses a client-server architecture. Client calls the server (Docker engine) using a Restful API.
+Docker Engine runs on the background, takes care of building and running docker containers.
+install guide - https://docs.docker.com/get-docker/
+cmd -> docker version -- will give you the installed docker version
+add a Dockerfile to app - has information on how to package app into an image
+image has - a cut-down OS, a runtime environment (eg: Node), application files, third-party libraries, environment variables
+Docker starts a container using an image.
+We can push image to a docker registry like docker hub. It is a storage that anyone can use.
+Then that image can be pulled by any machine running docker.
+
+FROM node:alpine -- pullin the node image built for the linux version alpine.
+COPY . /app -- copy files from current directory to the app directory created inside the image file systems
+WORKDIR /app
+CMD node app.js
+
+Go to cmd and run -> docker build -t docker-init .
+We are giving a tag for the image to be created named "docker-init". Dot(.) after that tells docker, where the Dockerfile for the application is located.
+. means current directory.
+When that command is run, docker will create the image, but we can't see it inside the project directory. It is a complex process.
+To see all the images on this computer we can type-> docker images OR docker image ls
+docker run docker-init --will run the image we created, it doesn't matter from which directory, because this image has all the files needed to run this app.
+
+https://labs.play-with-docker.com/
+login with google account
+Add new instance -> will create an instance with linux (virtual machine)
+type -> node --node command not found
+type -> docker pull Vinura96/docker-init (We need to upload the image to docker hub before running this)
+type -> docker run Vinura96/docker-init

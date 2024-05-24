@@ -36,3 +36,31 @@ Add new instance -> will create an instance with linux (virtual machine)
 type -> node --node command not found
 type -> docker pull Vinura96/docker-init (We need to upload the image to docker hub before running this)
 type -> docker run Vinura96/docker-init
+
+docker is built on basic linux concepts.
+Linux Distributions? Linux is open source software. So different companies have creted their own linux versions, which are called Linux Distributions.
+Famous Linux distros : Ubunty, Debian, Alpine, Fedora, CentOS
+
+Running Linux.
+Go to hub.docker.com -> search for Ubuntu
+instead of running 'docker pull ubuntu', run 'docker run ubuntu' which will pull the image before running, since we don't have the image locally.
+docker ps -> list of running processers or running containers
+docker ps -a -> we can see the stopped containers as well.
+docker run -it ubuntu -> 'it' means interactive mode. This command will open the shell. Shell is a program, which passes our commands to OS for execution.
+shell shows like 'root@2f123e4567e8:/#' -> 'root' means the currently logged in user. '2f123e4567e8' is the machine name (unique container id). '/' represents the root directory of the file system.
+'#' means user have the all the permissions. by default user is logged in as root user. If it was another user, it shouldshow '$' sign instead of '#'.
+inside the shell type -> echo hello -> which will print hello
+inside the shell type -> whoami -> root(shows the current user)
+inside the shell type -> echo $0 -> /bin/bash (location of the shell program)
+Linux uses '/' forward slash to seperate directories and files. Windows use black slash.
+Linux is a case sensitive OS. If you type 'Echo $0' it's not gonna work.
+inside the shell type -> history -> will show all the commands you executed lately
+inside the shell type -> !2 -> will run the second command shown in the history.
+inside the shell type -> exit -> exit the session (Or press Ctrl+D)
+Detach without stopping: Press Ctrl+P and then Ctrl+Q.
+docker attach <container_id_or_name> -> Attach to the Running Container. This will reattach your terminal to the container's main process.
+If you want to open a new shell session in the running container, docker exec is a better option because it allows you to run a new command in the container without interfering with the existing processes.
+docker exec -it <container_id_or_name> /bin/bash
+docker stop <container_id_or_name> -> stop a running image
+docker rm <container_id_or_name> -> Remove the Stopped Container: Remove the container to free up system resources.
+docker rmi <image_id_or_name> -> remove the Docker Image: Use the image ID or name to remove the image.

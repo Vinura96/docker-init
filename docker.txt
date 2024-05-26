@@ -99,3 +99,20 @@ cd <path> -> to change the directory. path can be relative or absolute. An absol
 cd .. -> go up one level in directories.
 ls <path> - to see what's inside a directory, without going there. path can be relative or absolute.
 cd ~ -> go to the home directory of user.
+mkdir test -> create a new directory named 'test' inside the home directory.
+mv test docker -> rename directory to 'docker'. If you want to move the directory to a different location, give the path, instead of the name docker.
+cd docker -> touch hello.txt -> create a new file name hello.
+touch file1.txt file2.txt file3.txt -> create multiple files at once.
+ctrl+w remove the last typed word, at command line.
+rm file1.txt -> remove files. you can give multiple files as well.
+rm file* -> remove files that starts with 'file'
+rm -r docker/ -> remove directory and all its content.
+nano file1.txt -> open a new text file named file1 using nano.
+cat file1.txt -> cat is short for concatenate. will show what is inside the file1.
+cat is usual for short files with one page. If there are long files, with more mages use 'more' command.
+more /etc/adduser.conf -> will show the text inside this file. press 'space' to go to next page. press 'enter' to go line by line.
+To exit the file press 'Q'.
+you can only scroll down with 'more'. To scroll up use the command 'less' -> apt install less
+less /etc/adduser.conf -> use up and down arrows to scroll
+head -n 5 /etc/adduser.conf -> no of lines you need to see from the file is top 5 lines.
+tail -n 5 /etc/adduser.conf -> view last five lines

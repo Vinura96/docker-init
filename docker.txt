@@ -76,3 +76,16 @@ Now you will be able to install nano since its available in the database.
 Before installing a package, always run 'apt update' to update your package database.
 inside the shell type -> nano -> which will open the text editor.
 inside the shell type -> apt remove nano -> which will unisntall nano
+
+linux file system. In linux everything is a file.
+/ = root directory.
+under root directory, we have following directories.
+bin - binaries or programs.
+boot - includes all the files related to booting.
+dev - short word for devices. Files that needed to act as devices are stored in this directory.
+etc - editable text configurations. we have configuration files here.
+home - home directories for users are stored
+root - home directory of the root user. only the root user can access this directory.
+lib - keeping library files, like software library dependancies.
+var - variables. Files which are updated frequently. ex: log files, application data...
+proc - files that represent running processes.

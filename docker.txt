@@ -64,3 +64,15 @@ docker exec -it <container_id_or_name> /bin/bash
 docker stop <container_id_or_name> -> stop a running image
 docker rm <container_id_or_name> -> Remove the Stopped Container: Remove the container to free up system resources.
 docker rmi <image_id_or_name> -> remove the Docker Image: Use the image ID or name to remove the image.
+
+package managers - eg: npm, yarn, pip, Nuget
+In ubuntu, apt (advance package tool) is used as a package manager.
+inside the shell type -> apt -> will show the bunch of sub commands apt have.
+nano is a basic text editor for linux.
+inside the shell type -> apt install nano -> which gives an error since it's not inside the package library of linux.
+linux has a package database of hundreds of packages. But not all of this packages are installed. 'apt list' command will show them.
+To update the package database -> apt update
+Now you will be able to install nano since its available in the database.
+Before installing a package, always run 'apt update' to update your package database.
+inside the shell type -> nano -> which will open the text editor.
+inside the shell type -> apt remove nano -> which will unisntall nano

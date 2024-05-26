@@ -116,3 +116,7 @@ you can only scroll down with 'more'. To scroll up use the command 'less' -> apt
 less /etc/adduser.conf -> use up and down arrows to scroll
 head -n 5 /etc/adduser.conf -> no of lines you need to see from the file is top 5 lines.
 tail -n 5 /etc/adduser.conf -> view last five lines
+cat file1.txt > file2.txt -> cat will read the file from file1 and write the output to file2
+cat file1.txt file2.txt -> concatenate files and print to screen
+echo sometext > file3.txt -> write 'sometext' to file 3.
+cat file1.txt file2.txt > file4.txt -> combine files and write to anothe file.

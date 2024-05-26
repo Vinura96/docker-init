@@ -89,3 +89,13 @@ root - home directory of the root user. only the root user can access this direc
 lib - keeping library files, like software library dependancies.
 var - variables. Files which are updated frequently. ex: log files, application data...
 proc - files that represent running processes.
+
+Navigating the file system.
+pwd - Print working directory. We can see where we are in the file system.
+ls - list the files inside the directory.
+ls -1 -> will list the files, one item per line.
+ls -l -> list with more details (permissions of this file/directory, owner, size, date)
+cd <path> -> to change the directory. path can be relative or absolute. An absolute path always start from the root directory('/')
+cd .. -> go up one level in directories.
+ls <path> - to see what's inside a directory, without going there. path can be relative or absolute.
+cd ~ -> go to the home directory of user.

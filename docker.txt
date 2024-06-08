@@ -120,3 +120,5 @@ cat file1.txt > file2.txt -> cat will read the file from file1 and write the out
 cat file1.txt file2.txt -> concatenate files and print to screen
 echo sometext > file3.txt -> write 'sometext' to file 3.
 cat file1.txt file2.txt > file4.txt -> combine files and write to anothe file.
+
+docker --help -> gives information on available docker commands
